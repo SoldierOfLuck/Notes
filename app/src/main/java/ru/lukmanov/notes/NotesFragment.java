@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import static ru.lukmanov.notes.Notes.NotesDataFragment.ARG_INDEX;
-import ru.lukmanov.notes.Notes.Notes;
 import ru.lukmanov.notes.Notes.NotesDataFragment;
 
 public class NotesFragment extends Fragment {
@@ -36,7 +35,7 @@ public class NotesFragment extends Fragment {
             currentPosition = savedInstanceState.getInt(CURRENT_NOTE, 0);
         }
         initList(view);
-        // отображения открытого ранее герба в ландшафтной ориентации
+        // отображение открытой заметки в ландшафтной ориентации
         if (isLandscape()) {
             showDataLand(currentPosition);
         }
@@ -70,9 +69,8 @@ public class NotesFragment extends Fragment {
         intent.putExtra(ARG_INDEX, index);
         activity.startActivity(intent);
     }
-    // Показываем герб в ландшафтной ориентации
+
     private void showDataLand(int index) {
-// Создаём новый фрагмент с текущей позицией для вывода герба
         NotesDataFragment detail = NotesDataFragment.newInstance(index);
 // Выполняем транзакцию по замене фрагмента
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();

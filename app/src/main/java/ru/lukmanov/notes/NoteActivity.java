@@ -18,8 +18,6 @@ public class NoteActivity extends AppCompatActivity {
             finish();
             return;
         }
-// Если эта activity запускается первый раз (с каждым новым гербомпервый раз),
-// то перенаправим параметр фрагменту и запустим фрагмент
         if (savedInstanceState == null)
             getSupportFragmentManager()
                     .beginTransaction()
