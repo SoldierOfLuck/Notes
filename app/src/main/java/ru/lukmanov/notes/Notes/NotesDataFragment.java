@@ -1,20 +1,13 @@
 package ru.lukmanov.notes.Notes;
 
-import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
-import java.util.ArrayList;
-
-import ru.lukmanov.notes.Notes.Notes;
-import ru.lukmanov.notes.NotesFragment;
 import ru.lukmanov.notes.R;
 
 public class NotesDataFragment extends Fragment {

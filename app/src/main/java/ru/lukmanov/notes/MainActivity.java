@@ -1,10 +1,7 @@
 package ru.lukmanov.notes;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-
-import ru.lukmanov.notes.Notes.Notes;
 
 public class MainActivity extends AppCompatActivity {
     @Override

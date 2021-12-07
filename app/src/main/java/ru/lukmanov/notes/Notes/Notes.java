@@ -1,7 +1,5 @@
 package ru.lukmanov.notes.Notes;
 
-import java.util.Calendar;
-
 public class Notes {
     private static String title;               //заголовок заметки
     private static String content;             //описание заметки
@@ -14,8 +12,6 @@ public class Notes {
     public Notes(String title, String content) {
         this.title = title;
         this.content = content;
-        this.date = date;
-        this.place = place;
     }
 
     public static String getTitle() {

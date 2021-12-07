@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import static ru.lukmanov.notes.Notes.NotesDataFragment.ARG_INDEX;
-import ru.lukmanov.notes.Notes.Notes;
 import ru.lukmanov.notes.Notes.NotesDataFragment;
 
 public class NotesFragment extends Fragment {
