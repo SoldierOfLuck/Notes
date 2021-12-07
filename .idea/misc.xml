@@ -8,10 +8,12 @@
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout-land/fragment_settings.xml" value="0.26875" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout/activity_main.xml" value="0.21145833333333333" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout/activity_note.xml" value="0.22552083333333334" />
+        <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout/custom_alert_dialog.xml" value="0.15989583333333332" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout/fragment_app_data.xml" value="0.10364583333333334" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout/fragment_notes.xml" value="0.22552083333333334" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout/fragment_notes_data.xml" value="0.22552083333333334" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout/fragment_settings.xml" value="0.10364583333333334" />
+        <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/menu/side_menu.xml" value="0.15989583333333332" />
       </map>
     </option>
   </component>
