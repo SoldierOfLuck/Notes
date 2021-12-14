@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Заметки</string>
+    <string name="create">Создать</string>
+    <string name="settings">Настройки</string>
+    <string name="data">Сведения</string>
+    <string name="regular_style">Обычный стиль</string>
+    <string name="light_style">Яркий стиль</string>
+    <string name="dark_style">Темный стиль</string>
+    <string name="back">Назад</string>
+    <string name="exit">Выход</string>
+    <string name="Alert">Предупреждение</string>
+    <string name="AlertText">Вы уверены, что хотите закрыть приложение</string>
+    <string name="hello_blank_fragment">Привет фрагмент</string>
+</resources>
