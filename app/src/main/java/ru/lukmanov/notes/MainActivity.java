@@ -1,53 +1,85 @@
 package ru.lukmanov.notes;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import ru.lukmanov.notes.observe.Publisher;
+import ru.lukmanov.notes.ui.NotesAppFragment;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Navigation navigation;
+    private Publisher publisher = new Publisher();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button_create = findViewById(R.id.button_create);
-        Button button_settings = findViewById(R.id.button_settings);
-        Button button_data = findViewById(R.id.button_data);
-
-        button_settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack("")
-                        .add(R.id.fragment_container, new SettingsFragment()).commit();
-            }
-
-        });
-        button_data.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .add(R.id.fragment_container, new AppDataFragment()).commit();
-            }
-
-        });
-        button_create.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .add(R.id.fragment_container, new NotesFragment()).commit();
-            }
-
-        });
-        getSupportFragmentManager()
-                .beginTransaction()
-                .addToBackStack("")
-                .add(R.id.fragment_container, new NotesFragment()).commit();
+        navigation = new Navigation(getSupportFragmentManager());
+        initToolBar();
+        getNavigation().addFragment(new NotesAppFragment(), false);
+        addFragment(new NotesAppFragment());
     }
-    private boolean isLandscape() {
-        return getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+
+    private void addFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
+    }
+
+    private void initToolBar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    public Navigation getNavigation() {
+        return navigation;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    @Override
+    public void onBackPressed() {
+        showAlertDialogWithCustomView();
+    }
+
+    private void showAlertDialogWithCustomView() {
+        final View customView = getLayoutInflater().inflate(R.layout.custom_alert_dialog, null);
+        new AlertDialog.Builder(this)
+                .setView(customView)
+                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(MainActivity.this, "Приложение закрыто",
+                                Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                })
+                .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(MainActivity.this, "Отмена",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
     }
 }
