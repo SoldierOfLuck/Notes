@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GeekBrains/Android/Note_s/app/src/main/res/layout/activity_main.xml" value="0.10729166666666666" />
+        <entry key="..\:/GeekBrains/Android/Note_s/app/src/main/res/layout/fragment_app_data.xml" value="0.10729166666666666" />
+        <entry key="..\:/GeekBrains/Android/Note_s/app/src/main/res/menu/card_menu.xml" value="0.10729166666666666" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout-land/activity_main.xml" value="0.176" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout-land/activity_main_2.xml" value="0.15405405405405406" />
         <entry key="..\:/GeekBrains/Android/Notes/app/src/main/res/layout-land/fragment_settings.xml" value="0.26875" />

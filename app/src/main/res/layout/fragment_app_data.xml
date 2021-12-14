@@ -3,4 +3,18 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
+    <TextView
+        android:id="@+id/App_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/TextSize">
+    </TextView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_app_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/textDescription"
+        android:text="@string/back">
+    </com.google.android.material.button.MaterialButton>
 </LinearLayout>
